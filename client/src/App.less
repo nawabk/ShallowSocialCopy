@@ -1,0 +1,288 @@
+@import '~antd/dist/antd.less';
+
+:root {
+  --primary-light: #6a1b9a;
+  --primary-very-light: #ab47bc;
+  --primary: #4a148c;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+.form-container {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #eef2f7;
+}
+.form {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1rem 1.5rem;
+  max-height: 20rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.form h1 {
+  align-self: center;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+.form__label {
+  transform: translate(0.5rem, -1.8rem);
+  transition: all 0.2s ease-in;
+}
+.form__control {
+  width: 20rem;
+  padding: 5px 10px;
+  border: 1px solid var(--gray);
+  outline: none;
+}
+.form__control:focus ~ .form__label {
+  transform: translate(-1rem, -2.8rem) scale(0.8);
+  font-weight: bold;
+  color: var(--primary);
+}
+.form__control:focus ~ .form__label > span {
+  background-color: #fff;
+}
+.form__control:focus {
+  border: 1.5px solid var(--primary);
+}
+.form__control:not(:placeholder-shown) {
+  border: 1.5px solid var(--primary);
+}
+.form__control:not(:placeholder-shown) ~ .form__label {
+  transform: translate(-1rem, -2.8rem) scale(0.8);
+  font-weight: bold;
+  color: var(--primary);
+}
+.form__control:not(:placeholder-shown) ~ .form__label > span {
+  background-color: #fff;
+}
+
+/*User profile starts*/
+.userprofile__header {
+  height: 3rem;
+  background-color: var(--primary-very-light);
+}
+.userprofile__content {
+  padding: 10px;
+}
+.userprofile__info {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+/*User profile ends*/
+
+/*Alert starts*/
+.alert__container {
+  position: fixed;
+  padding: 4px;
+  top: 1rem;
+  right: 1rem;
+  z-index: 500;
+  width: 20rem;
+}
+.alert__top-right {
+  position: relative;
+  margin-bottom: 1rem;
+}
+/*Alert Ends*/
+
+/*Blank box starts*/
+.blank-box {
+  width: 17vw;
+  -webkit-box-shadow: 0 8px 15px -15px #000;
+  -moz-box-shadow: 0 8px 15px -15px #000;
+  box-shadow: 0 8px 15px -15px #000;
+  position: fixed;
+}
+/*Blank box ends*/
+
+/*Post starts*/
+.post__create {
+  min-height: 8rem;
+  overflow-y: auto;
+}
+.post__create {
+  display: flex;
+  justify-content: space-between;
+}
+.post__create p {
+  font-size: 1.5rem;
+}
+.post__create textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.post__image {
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+.post-modal {
+  display: flex;
+  flex-direction: column;
+}
+.post-modal__textarea {
+  padding: 1rem;
+  height: 6rem;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.post-modal__actions {
+  align-self: flex-end;
+  display: flex;
+  padding: 1rem;
+}
+
+.post__footer {
+  padding-bottom: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.post__camera {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.twitt__details {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.twitt__by {
+  margin-left: 0.5rem;
+}
+.twitt__by h3 {
+  line-height: 2rem;
+}
+.twitt__by p {
+  line-height: 0;
+}
+.twitt__content-text {
+  padding: 1rem;
+  margin-top: 0.1rem;
+}
+
+.twitt__content-img {
+  max-width: 100%;
+  height: auto;
+}
+.twitt__info {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+.twitt__unlike-icon {
+  color: #4a148c;
+}
+.twitt__unlike-icon:hover {
+  cursor: pointer;
+}
+.twitt__like-icon {
+  transition: all 0.2s;
+}
+.twitt__like-icon:hover {
+  cursor: pointer;
+}
+.twitt__like-icon:active {
+  transform: scale(1.2);
+}
+.twitt__comment-icon {
+}
+.twitt__comment-icon:hover {
+  cursor: pointer;
+}
+.comments {
+  padding: 10px;
+}
+.comments__create {
+  display: flex;
+  align-items: center;
+  width: 95%;
+}
+.comments__input {
+  margin-left: 10px;
+  border-radius: 10px;
+  margin-right: 5px;
+  max-width: 80%;
+}
+.comment {
+  display: flex;
+  align-items: flex-start;
+}
+.comment__content {
+  box-sizing: border-box;
+  margin-left: 3px;
+  padding: 2px 10px;
+  background-color: #f3f6f8;
+  border-radius: 0 10px 10px 10px;
+  width: 80%;
+  position: relative;
+}
+.comment__description {
+  margin-top: -10px;
+}
+.comment__link {
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.comment__edit {
+  margin-right: 0.2rem;
+  color: var(--gray-dark);
+}
+.comment__delete {
+  color: var(--gray-dark);
+}
+.comment__decision {
+  position: absolute;
+  bottom: 7px;
+  right: 1.3rem;
+}
+
+/*Post ends*/
+
+/*antd css starts*/
+
+.ant-layout-header .logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: transparent;
+}
+
+/*antd css ends*/
+.notification__button .anticon-notification {
+  margin-right: 5px;
+  font-size: 24px;
+}
+.notification__button .anticon-notification svg {
+  fill: #555;
+  font-size: 20px;
+}
+
+.notification__list:hover {
+  cursor: pointer;
+}
