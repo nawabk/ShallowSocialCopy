@@ -175,7 +175,7 @@ export const updateComment = (twittId, commentId, body) => async dispatch => {
 export const deleteComment = (twittId, commentId) => async dispatch => {
   try {
     const config = getAuthHeader();
-    const res = await axios.delete(
+    await axios.delete(
       `${API_URL}/twitts/${twittId}/comment/${commentId}`,
       config
     );

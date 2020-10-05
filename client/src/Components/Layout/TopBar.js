@@ -23,7 +23,9 @@ const TopBar = ({ name, history }) => {
   );
   return (
     <Header style={{ width: '100%', zIndex: '2' }}>
-      <div className='logo'>ShallowSocialCopy</div>
+      <div className='logo'>
+        <h4>Shallow Social Copy</h4>
+      </div>
       <Menu theme='dark' mode='horizontal' defaultSelectedKeys={['2']}>
         {name && (
           <SubMenu icon={avatar} style={{ float: 'right' }}>

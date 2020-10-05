@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Button } from 'antd';
 import { onLogin } from '../../store/actions/authActions';
 
-const Login = ({ onLogin, loading }) => {
+const Login = ({ onLogin, loading, createAccountClickHandler }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -43,8 +43,8 @@ const Login = ({ onLogin, loading }) => {
       <Button type='primary' htmlType='submit' disabled={loading}>
         Sign In
       </Button>
-      <a href='!#' className='form__link'>
-        Forgot Your Password
+      <a href='#!' className='form__link' onClick={createAccountClickHandler}>
+        Create Your Account
       </a>
     </form>
   );
