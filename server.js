@@ -10,7 +10,7 @@ const app = require('./app');
 const server = http.createServer(app);
 const io = socketIo(server);
 
-const DB = process.env.url.replace('<password>', process.env.PASSWORD);
+const DB = process.env.URL.replace('<password>', process.env.PASSWORD);
 
 mongoose
   .connect(DB, {
