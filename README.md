@@ -2,7 +2,7 @@
 App Link :- [ShallowSocialCopy](https://limitless-springs-63186.herokuapp.com/)
 
 This App is a copy of social networking site.As not every single feature is there in this app that's why it is named as shallow social copy.
-This app is built on MERN stack with the following feature.
+This app is built on **MERN** stack with the following feature.
 1. The app has authentication feature where a user can sign in and sign up.
 2. The user can see others posts,can create own post,can upload image in the post
 3. The app uses **firebase storage** to store the images.
